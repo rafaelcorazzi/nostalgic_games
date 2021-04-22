@@ -20,6 +20,13 @@ defmodule NostalgicGames.Games do
   end
 
   @required_params [:console_id, :game_id]
+
+  def build(params \\ :empty) do
+    params
+    |> changeset()
+    |> apply_action(:insert)
+  end
+
   def changeset(params \\ :empty) do
       %__MODULE__{}
       |> cast(params, @required_params)
