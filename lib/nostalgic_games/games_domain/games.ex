@@ -16,7 +16,11 @@ defmodule NostalgicGames.Games do
     field :owner, :string
     timestamps()
 
-    belongs_to(:console, NostalgicGames.Console, foreign_key: :console_id, references: :console_id, primary_key: false)
+    belongs_to(:console, NostalgicGames.Console,
+      foreign_key: :console_id,
+      references: :console_id,
+      primary_key: false
+    )
   end
 
   @required_params [:console_id, :game_id]
@@ -28,8 +32,8 @@ defmodule NostalgicGames.Games do
   end
 
   def changeset(params \\ :empty) do
-      %__MODULE__{}
-      |> cast(params, @required_params)
-      |> validate_required(@required_params)
+    %__MODULE__{}
+    |> cast(params, @required_params)
+    |> validate_required(@required_params)
   end
 end
