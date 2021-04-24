@@ -11,7 +11,7 @@ defmodule NostalgicGames.Console.Read do
 
   defp read(uuid) do
     case Repo.get(Console, uuid) do
-      nil -> {:error, "Trainer not found."}
+      nil -> {:error, "console not found."}
       console -> {:ok, console}
     end
   end
