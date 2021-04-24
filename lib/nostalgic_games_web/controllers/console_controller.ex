@@ -1,6 +1,5 @@
 defmodule NostalgicGamesWeb.ConsoleController do
   use NostalgicGamesWeb, :controller
-  alias NostalgicGames.{Repo, Console}
 
   action_fallback NostalgicGamesWeb.FallbackController
 
@@ -27,10 +26,8 @@ defmodule NostalgicGamesWeb.ConsoleController do
   defp handle_delete({:error, _reason} = error, _conn), do: error
 
   def index(conn, _params) do
-    consoles = Repo.all(Console)
-    IO.inspect(consoles)
-   # IO.puts(consoles)
-   render(conn, "index.json", consoles: consoles)
+    consoles = NostalgicGames.read_all_console()
+    render(conn, "index.json", consoles: consoles)
   end
 
   def show(conn, %{"id" => id}) do

@@ -4,5 +4,5 @@ defmodule NostalgicGames do
   defdelegate create_console(params), to: Console.Create, as: :call
   defdelegate delete_console(params), to: Console.Delete, as: :call
   defdelegate read_console(params), to: Console.Read, as: :call
-
+  defdelegate read_all_console(params \\ %{}), to: Console.ReadAll, as: :call
 end
