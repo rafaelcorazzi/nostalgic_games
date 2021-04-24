@@ -7,7 +7,7 @@ defmodule NostalgicGamesWeb.Router do
 
   scope "/api", NostalgicGamesWeb do
     pipe_through :api
-    resources "/console", ConsoleController, only: [:create, :show, :delete, :update]
+    resources "/console", ConsoleController, only: [:index, :create, :show, :delete, :update]
   end
 
   # Enables LiveDashboard only for development
