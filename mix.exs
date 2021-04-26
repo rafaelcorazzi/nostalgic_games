@@ -41,7 +41,7 @@ defmodule NostalgicGames.MixProject do
       {:telemetry_metrics, "~> 0.4"},
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 2.8"},
+       {:cowboy, "< 2.8.0", override: true},
       {:jason, "~> 1.0"},
       { :uuid, "~> 1.1" },
       {:plug_cowboy, "~> 2.5"},
