@@ -18,6 +18,9 @@ config :nostalgic_games, NostalgicGames.Repo,
   pool_size: 10
   
 config :nostalgic_games, NostalgicGamesWeb.Endpoint,
+  http: [port: {:system, "PORT"}],
+  load_from_system_env: true,
+  force_ssl: [rewrite_on: [:x_forwarded_proto]],
   url: [scheme: "https", host: "nostalgicgames.herokuapp.com", port: 443]
 
 # Do not print debug messages in production
