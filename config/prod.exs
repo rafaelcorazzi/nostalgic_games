@@ -16,6 +16,7 @@ config :nostalgic_games, NostalgicGames.Repo,
   hostname: "ec2-54-224-120-186.compute-1.amazonaws.com",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
+  ssl: true
   
 config :nostalgic_games, NostalgicGamesWeb.Endpoint,
   url: [scheme: "https", host: "nostalgicgames.herokuapp.com", port: 443],
