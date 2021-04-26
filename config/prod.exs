@@ -18,7 +18,7 @@ config :nostalgic_games, NostalgicGames.Repo,
   pool_size: 10
   
 config :nostalgic_games, NostalgicGamesWeb.Endpoint,
-  url: [host: "example.com", port: 80],
+  url: [scheme: "https", host: "nostalgicgames.herokuapp.com", port: 443],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production
