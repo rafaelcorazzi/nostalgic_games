@@ -4,7 +4,7 @@
 # remember to add this file to your .gitignore.
 use Mix.Config
 
-database_url = "postgres://iyuqnepkjlbnwg:8a53d27b994b502686838c5a15925e00d36bedf63a82c46d48e89137822fcfe3@ec2-54-224-120-186.compute-1.amazonaws.com:5432/d5dhklu17gstgm"
+database_url = "postgres://uvfyeqiohkshnd:bcc28f2c17c53fe669c3d0a3defd4f1c7c94fd31e54a7d4d58ae1dc09ccf5c6a@ec2-107-22-245-82.compute-1.amazonaws.com:5432/da1fcplqr566da"
 
 config :nostalgic_games, NostalgicGames.Repo,
   ssl: true,
