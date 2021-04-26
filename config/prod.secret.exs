@@ -7,7 +7,7 @@ use Mix.Config
 database_url = "postgres://iyuqnepkjlbnwg:8a53d27b994b502686838c5a15925e00d36bedf63a82c46d48e89137822fcfe3@ec2-54-224-120-186.compute-1.amazonaws.com:5432/d5dhklu17gstgm"
 
 config :nostalgic_games, NostalgicGames.Repo,
-  # ssl: true,
+  ssl: true,
   url: database_url,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
